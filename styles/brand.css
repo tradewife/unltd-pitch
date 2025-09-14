@@ -1,0 +1,12 @@
+/* Brand color tokens for UNLTD deck. These CSS variables can be
+   consumed from Tailwind via the `hsl(var(--brand))` syntax. */
+
+:root {
+  --brand: 228 100% 60%;
+  --brand-foreground: 210 40% 98%;
+}
+
+.dark:root {
+  /* Slightly adjust brightness for dark mode */
+  --brand: 228 100% 62%;
+}
