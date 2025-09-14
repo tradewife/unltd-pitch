@@ -1,9 +1,17 @@
 import React from "react";
 
-// A reusable slide wrapper that centers its children.
+// A reusable slide wrapper that centers its children and provides a dark, glassmorphism container.
 const Slide = ({ children }: { children: React.ReactNode }) => (
-  <section className="h-dvh grid place-items-center p-10 text-center">
-    <div className="max-w-4xl mx-auto space-y-4">{children}</div>
+  // Each slide occupies the full viewport height and centers its content. The section itself
+  // uses a dark backdrop. Inside, a card-like container applies glassmorphism styles:
+  // semi‑transparent background, subtle blur, border and shadow. All text within defaults
+  // to white, monospaced typography via Tailwind’s font-mono utility.
+  <section className="h-dvh grid place-items-center p-6 text-center bg-black">
+    <div
+      className="max-w-4xl mx-auto p-8 md:p-12 space-y-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg text-white font-mono"
+    >
+      {children}
+    </div>
   </section>
 );
 
